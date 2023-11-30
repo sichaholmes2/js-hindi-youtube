@@ -48,3 +48,30 @@ console.log(typeof myFunction)//function
 console.log(typeof myObj)//object
 console.log(typeof heroes)// this also displays object
 console.log("bcd")
+
+
+//   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/* 
+stack memo is used for (primiyive data types)
+heap(non primitive)
+*/
+
+let myYoutubename= "hiteshchoudharydotcom"
+let anothername=myYoutubename 
+
+anothername="chaiaurcode"
+console.log(myYoutubename)
+console.log(anothername)
+
+let userOne={
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+//the above  part goes inside heap
+
+let userTwo=userOne
+userTwo.email="hitesh@google.com"
+
+console.log(userOne.email);//hitesh@google.com
+console.log(userTwo.email);//hitesh@google.com
+//not one bith got changed
