@@ -65,3 +65,27 @@ console.log(Object.values(tinderUser));
 
 //entries
 console.log(Object.entries(tinderUser));
+
+
+const course = {
+    coursename:"js in hindi",
+    price:"999",
+    courseInstructor:"hitesh"
+}
+
+//course.courseInstructor
+
+//another way to print this shit
+const{courseInstructor:inst}= course// we just kinda renamed courseInstructor to inst for  easy typing
+
+console.log(inst)
+
+
+//{ } are used for destructuring
+
+
+//JSON in api has key value structure
+// "abcd":"efgh "
+//u also get apis in the form of arrays]
+//json is javascript object notation
+
