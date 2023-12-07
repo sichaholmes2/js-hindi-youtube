@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body   style="background-color: #212121 ;  color: #fff;"            >
+   <ul class="language">
+       <li>Javascript</li>
+   </ul> 
+</body>
+<script>
+//add a list item using function
+    function addLanguage(langName){
+       const li=document.createElement('li') //creating it
+       //aadding it 
+       li.innerHTML=`${langName}`
+
+       document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    
+    //problem is it travesrses the entire tree, so for large n.o of items, this fucks up
+
+//way 2
+    function addOptiLanguage(langName){
+const li = document.createElement('li')
+//li.appendChild(document.createTextNode(langName))
+li.appendChild(document.createTextNode(langName))
+
+document.querySelector('.language').appendChild(li)
+
+    }
+addOptiLanguage('golang')
+    //use appendChild method for big projects
+
+
+    //how to edit the values of li
+    const secondLang= document.querySelector("li:nth-child(2)")//changing python
+    //secondLang.innerHTML="Mojo" innerHTML traverses through the tree
+  const newli=document.createElement('li')
+  newli.textContent="Mojo"
+  //now we need to add it
+  secondLang.replaceWith(newli)
+
+
+  //another edit example to edit javascript
+  const firstLang=document.querySelector("li:first-child")
+  firstLang.outerHTML= '<li>Typescript</li>'
+
+
+  //remove element(last element)
+  const lastLang= document.querySelector('li:last-child')
+  lastLang.remove()
+
+
+
+
+
+</script>
+</html>
