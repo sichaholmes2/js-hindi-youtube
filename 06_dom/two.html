@@ -1,0 +1,44 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    <div class="parent">
+       <div class="day">Monday</div>
+       <div class="day">Tuesday</div>
+       <div class="day">Wedneday</div>
+       <div class="day">Thursday</div>
+
+    </div>
+</body>
+ <!--selecting the first with class name parent-->
+<script>
+   
+    const parent=document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children)//gives html collection of parent
+    console.log(parent.children[1].innerHTML)  //Tuesday
+
+
+    for(let i=0; i<parent.children.length;++i){
+        console.log(parent.children[i].innerHTML)// for displaying each value
+    }
+
+
+parent.children[1].style.color="orange"
+console.log(parent.firstElementChild)//moving from parent to child //Monday
+console.log(parent.lastElementChild)//Thursday
+
+//u can also move from child to parent
+const dayOne=document.querySelector('.day');
+console.log(dayOne);//Monday
+//moving to it parent
+console.log(dayOne.parentElement);//gives the parent class in concole
+console.log(dayOne.nextElementSibling)//travel to its siblings i.e Tuesaday
+console.log("NODES: ", parent.childNodes);// gives 9 elements
+</script>
+</html>
