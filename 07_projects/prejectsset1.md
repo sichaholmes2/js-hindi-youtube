@@ -60,3 +60,18 @@ form.addEventListener('submit', function (e) {
 
 
 ```
+
+```project2 solution
+const clock = document.getElementById('clock');
+//const clock=document.querySelector('#clock') both above and below are same
+
+//setInterval runs something at any Interval
+
+setInterval(function () {
+  let date = new Date();
+  //console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+
+```
