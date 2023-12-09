@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai and code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+//setTimeout function->method that cals an api
+// setTimeout(function(){
+//     console.log("Hitesh")
+// },2000)// handler and timer are the arguements, here function is handler, 2s is timeout
+//setTimeout carries out a function after some time
+
+//same can be done by passing function by reference
+const sayHitesh=function(){
+    console.log("Hitesh");
+}
+//changing the h1
+//to make it execute after 2s
+const changeText=function(){
+document.querySelector('h1').innerHTML="best Js Series"
+}
+setTimeout(changeText,2000)
+//to remove the 2s thing using stop button
+
+
+const changeMe=setTimeout(changeText,2000)
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log("stopped")
+})
+
+</script>
+</html>
