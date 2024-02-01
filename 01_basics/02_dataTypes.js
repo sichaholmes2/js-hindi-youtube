@@ -1,6 +1,6 @@
 "use strict"// ,treats all JS code as newer version of js
 
-//alert(3+3)// gives becaues alert has fiff syntax for node js
+//alert(3+3)// gives error becaues alert has diff syntax for node js
 // this shit works in browser
 
 //console.log(3+3) console.log("Sid")//gives error, there shud be ; in bw or in next line
